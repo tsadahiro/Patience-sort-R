@@ -24,4 +24,12 @@ showpiles <- function(res){
     barplot(sapply(res$piles, length))
 }
 
+lisstat <- function(n, niter){
+    lislen <- rep(0,niter)
+    for (i in 1:niter){
+        lislen[i] <- length(patiencegame(n)$piles)
+    }
+    lislen
+}
+
 
