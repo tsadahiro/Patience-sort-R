@@ -1,4 +1,3 @@
-
 patiencegame <- function(n){
     deck <- sample(1:n)
     piles <- list()
@@ -18,9 +17,11 @@ patiencegame <- function(n){
             }
         }
     }
-
     return(list(deck=deck,piles=piles))
 }
 
+showpiles <- function(res){
+    barplot(sapply(res$piles, length))
+}
 
 
